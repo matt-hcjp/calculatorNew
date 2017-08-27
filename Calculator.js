@@ -16,6 +16,7 @@ function displayNumber(number) {
     document.getElementById("display0").innerHTML = number;
 }
 
+// put documentation here.
 function printDebug() {
     console.log("StackNum:" + stackNum);
     console.log("StackOper:" + stackOper);
@@ -38,11 +39,16 @@ function enterNum(number) {
  * Enters an math operation.
  * @param {string} ops - the operator. Possible values: plus, minus, times, divide, and equals
  */
-function enterOp(ops) {
+function enterOp(ops) {        
     if(ops === "equals") {
-        total();
+        if(stackOper.length >= 1 && stackNum.length >= 2) {
+            total();
+        }
     } else {    
         stackOper.unshift(ops);
+        if(stackOper.length > 1) {
+            total();
+        }
     }
 
     printDebug();
@@ -73,7 +79,7 @@ function total() {
             break;
         case "divide":
             result = number2 / number1;
-            break;        
+            break; 
     }
 
     // step #4: push the result into stackNum
