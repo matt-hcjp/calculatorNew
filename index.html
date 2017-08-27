@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Calculator</title>
+    <link rel="stylesheet" type="text/css" href="Calculator.css" />
+    <script type="text/javascript" src="Calculator.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="flex-container">
+        <!--Display-->
+        <p class="display" id="display0">0</p>
+    </div>
+    <!--AC and Divide-->
+    <div class="flex-container">
+        <button class="btnlrg btn" onclick="reset()">AC</button>
+        <button class="btnsml calc" onclick="enterOp('divide')">&divide;</button>
+    </div>
+    <!--7,8,9 and Multiply-->
+    <div class="flex-container">
+        <button class="btnsml btn" onclick="enterNum('7')">7</button>
+        <button class="btnsml btn" onclick="enterNum('8')">8</button>
+        <button class="btnsml btn" onclick="enterNum('9')">9</button>
+        <button class="btnsml calc" onclick="enterOp('times')">&times;</button>
+    </div>
+    <!--4,5,6 and Subtract-->
+    <div class="flex-container">
+        <button class="btnsml btn" onclick="enterNum('4')">4</button>
+        <button class="btnsml btn" onclick="enterNum('5')">5</button>
+        <button class="btnsml btn" onclick="enterNum('6')">6</button>
+        <button class="btnsml calc" onclick="enterOp('minus')">&minus;</button>
+    </div>
+    <!--1,2,3 and Plus-->
+    <div class="flex-container">
+        <button class="btnsml btn" onclick="enterNum('1')">1</button>
+        <button class="btnsml btn" onclick="enterNum('2')">2</button>
+        <button class="btnsml btn" onclick="enterNum('3')">3</button>
+        <button class="btnsml calc" onclick="enterOp('plus')">&plus;</button>
+    </div>
+    <!--0 and Decimal and Equals-->
+    <div class="flex-container">
+        <button class="btnmdm btn" onclick="enterNum('0')">0</button>
+        <button class="btnsml btn">&period;</button>
+        <button class="btnsml calc" onclick="enterOp('equals')">&equals;</button>
+    </div>
+</div>
+
+</body>
+</HTML>
+
