@@ -27,10 +27,10 @@ function printDebug() {
  * @param {string} number - the integer entered when a button is pressed.
  */
 function enterNum(number) {
-    var num = parseInt(number);
-    stackNum.unshift(num);  
-    displayNumber(num);
-    printDebug();
+        var num = parseInt(number);
+        stackNum.unshift(num); 
+        displayNumber(num);
+        printDebug();
     
     // other way to write: stackNum.unshift(parseInt(number));
 }
@@ -46,7 +46,7 @@ function enterOp(ops) {
         }
     } else {    
         stackOper.unshift(ops);
-        if(stackOper.length > 1) {
+        if(stackOper.length > 1 && stackOper.length < 2) {
             total();
         }
     }
